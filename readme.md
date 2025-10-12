@@ -1,8 +1,8 @@
-# StreamingVLM: Real-Time Understanding for Infinite Video Streams ⚡️
+# StreamingVLM: Real-Time Understanding for Infinite Video Streams
 
 <p align="center">
     <a href=""><b>Paper</b></a> |
-    <a href=""><b>Slides</b></a> |
+    <a href="assets/StreamingVLM_slides.pdf"><b>Slides</b></a> |
     <a href="https://streamingvlm.hanlab.ai"><b>Demo Page</b></a>
 </p>
 
@@ -30,7 +30,7 @@ Go to [streamingvlm.hanlab.ai](https://streamingvlm.hanlab.ai) to see more cases
 ## 🚀 Inference
 
 <p align="center">
-  <img src="figures/infer.png" width="95%" />
+  <img src="assets/infer.png" width="95%" />
 </p>
 
 *You can run inference by the command below.*
@@ -67,7 +67,7 @@ export EVAL_DATASET_PATH=/path/to/your/Inf-Stream-Eval
 ### ▶️ Run SFT
 
 <p align="center">
-  <img src="figures/train.png" width="65%" />
+  <img src="assets/train.png" width="65%" />
 </p>
 *You can kick off SFT by executing the scripts below.*
 
@@ -87,7 +87,7 @@ conda activate streamingvlm-infer
 ```
 
 <p align="center">
-  <img src="figures/efficiency.png" width="65%" />
+  <img src="assets/efficiency.png" width="65%" />
 </p>
 
 *You can benchmark efficiency by running the script above.*
@@ -161,6 +161,6 @@ If you would like to change inference FPS, use the following command:
 ```bash
 sed -i 's/^FPS = .*/FPS = float(os.environ.get("QWENVL_FPS", "2.0"))/' \
   "$(python -c 'import inspect,qwen_vl_utils.vision_process as m; import os; print(os.path.abspath(inspect.getsourcefile(m)))')"
-```
+```*You can tweak FPS by editing the line via the command above.*
 
-*You can tweak FPS by editing the line via the command above.*
+
