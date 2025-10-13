@@ -1,7 +1,7 @@
 # StreamingVLM: Real-Time Understanding for Infinite Video Streams
 
 <p align="center">
-    <a href=""><b>Paper</b></a> |
+    <a href="https://arxiv.org/abs/2510.09608"><b>Paper</b></a> |
     <a href="assets/StreamingVLM_slides.pdf"><b>Slides</b></a> |
     <a href="https://streamingvlm.hanlab.ai"><b>Demo Page</b></a>
 </p>
