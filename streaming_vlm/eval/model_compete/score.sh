@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ===== Manual Configuration Section =====
-MODEL1_NAME='xrorrim/StreamingVLM'   
+MODEL1_NAME='mit-han-lab/StreamingVLM'   
 MODEL2_NAME="gpt-4o-mini" 
 JUDGE_MODEL="gpt-5"
 

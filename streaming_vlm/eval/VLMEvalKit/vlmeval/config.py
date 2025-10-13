@@ -1269,7 +1269,7 @@ qwen2vl_series = {
     ),
     "StreamingVLM": partial(
         Qwen2VLChat,
-        model_path="xrorrim/StreamingVLM",
+        model_path="mit-han-lab/StreamingVLM",
         min_pixels=128 * 28 * 28,
         max_pixels=768 * 28 * 28,
         total_pixels=24576 * 28 * 28,

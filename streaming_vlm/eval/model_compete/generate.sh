@@ -4,7 +4,7 @@ set -euo pipefail
 # ========= Default Parameters (can be overridden by command line) =========
 # MODEL_PATH_DEFAULT='chenjoya/LiveCC-7B-Instruct'
 # MODEL_BASE_DEFAULT='LiveCC'
-MODEL_PATH_DEFAULT='xrorrim/StreamingVLM'
+MODEL_PATH_DEFAULT='mit-han-lab/StreamingVLM'
 MODEL_BASE_DEFAULT='Qwen'
 DURATION_DEFAULT=10000
 TEMPERATURE_DEFAULT=0.9

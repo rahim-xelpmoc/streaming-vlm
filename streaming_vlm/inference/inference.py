@@ -528,7 +528,7 @@ if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--pos_mode", type=str, default="shrink", choices=["append", "shrink"])
     args.add_argument("--all_text", action="store_true", default=False)
-    args.add_argument("--model_path", type=str, default="xrorrim/StreamingVLM")
+    args.add_argument("--model_path", type=str, default="mit-han-lab/StreamingVLM")
     args.add_argument("--model_base", type=str, choices=["Qwen2_5", "Qwen2", "VILA"], default="Qwen2_5")
     args.add_argument("--video_path", type=str, default=default_video)
     args.add_argument("--window_size", type=int, default=DEFAULT_WINDOW_SIZE)
