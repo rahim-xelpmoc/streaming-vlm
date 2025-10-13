@@ -161,7 +161,9 @@ If you would like to change inference FPS, use the following command:
 ```bash
 sed -i 's/^FPS = .*/FPS = float(os.environ.get("QWENVL_FPS", "2.0"))/' \
   "$(python -c 'import inspect,qwen_vl_utils.vision_process as m; import os; print(os.path.abspath(inspect.getsourcefile(m)))')"
-```*You can tweak FPS by editing the line via the command above.*
+```
+
+*You can tweak FPS by editing the line via the command above.*
 
 ### Citation
 
