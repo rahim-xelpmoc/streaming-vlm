@@ -163,4 +163,19 @@ sed -i 's/^FPS = .*/FPS = float(os.environ.get("QWENVL_FPS", "2.0"))/' \
   "$(python -c 'import inspect,qwen_vl_utils.vision_process as m; import os; print(os.path.abspath(inspect.getsourcefile(m)))')"
 ```*You can tweak FPS by editing the line via the command above.*
 
+### Citation
+
+If you find StreamingVLM useful or relevant to your project and research, please kindly cite our paper:
+
+```bibtex
+@misc{xu2025streamingvlmrealtimeunderstandinginfinite,
+      title={StreamingVLM: Real-Time Understanding for Infinite Video Streams}, 
+      author={Ruyi Xu and Guangxuan Xiao and Yukang Chen and Liuning He and Kelly Peng and Yao Lu and Song Han},
+      year={2025},
+      eprint={2510.09608},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2510.09608}, 
+}
+```
 
