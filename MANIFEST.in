@@ -1,0 +1,8 @@
+include LICENSE
+include readme.md
+include README.md
+recursive-include scripts *
+recursive-include assets *
+recursive-include src/streaming_vlm *.py
+recursive-include src/streaming_vlm/data *
+global-exclude __pycache__

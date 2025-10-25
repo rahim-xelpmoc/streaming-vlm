@@ -9,18 +9,24 @@ authors = [
   { name="Example Author", email="author@example.com" },
 ]
 description = "streaming vlm package"
-readme = "README.md"
-requires-python = ">=3.12"
+readme = "readme.md"
+requires-python = ">=3.8"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
 ]
 license = "MIT"
-license-files = ["LICEN[CS]E*"]
+license-files = ["LICENSE"]
+
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["streaming_vlm"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 
 [project.urls]
