@@ -1,7 +1,7 @@
 from transformers.models.qwen2_5_vl.modeling_qwen2_5_vl import Qwen2_5_VLModelOutputWithPast,Qwen2_5_VLCausalLMOutputWithPast
 from typing import Optional, List, Tuple, Union
 import torch
-from streaming_vlm.inference.streaming_args import StreamingArgs
+from ..streaming_args import StreamingArgs
 
 def get_1d_rope_index(input_ids, image_grid_thw, video_grid_thw, second_per_grid_ts, attention_mask):
     if attention_mask is not None:

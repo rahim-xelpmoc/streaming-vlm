@@ -8,26 +8,26 @@ Run example:
         --video_path demo/sources/howto_fix_laptop_mute_1080p.mp4 \
         --output_dir generated_subtitles.vtt
 """
-import torch, functools, os, argparse
-from transformers import Qwen2_5_VLForConditionalGeneration, Qwen2VLForConditionalGeneration, Qwen2_5_VLProcessor, Qwen2VLProcessor, AutoProcessor
-from streaming_vlm.inference.streaming_args import StreamingArgs
-from streaming_vlm.utils.get_qwen_range import *
+import torch
+import os
+import argparse
+from transformers import Qwen2_5_VLForConditionalGeneration, Qwen2VLForConditionalGeneration, AutoProcessor
+from .streaming_args import StreamingArgs
+from ..utils.get_qwen_range import *
 from qwen_vl_utils.vision_process import (
-    FORCE_QWENVL_VIDEO_READER, VIDEO_TOTAL_PIXELS, FPS_MAX_FRAMES, VIDEO_MIN_PIXELS, VIDEO_MAX_PIXELS, FRAME_FACTOR, IMAGE_FACTOR, FPS,
-    smart_nframes, smart_resize
+     VIDEO_TOTAL_PIXELS,VIDEO_MIN_PIXELS, VIDEO_MAX_PIXELS, FRAME_FACTOR, FPS
 )
 import sys
 import json
-from streaming_vlm.inference.qwen2_5.patch_model import convert_qwen2_5_to_streaming
-from streaming_vlm.inference.qwen2.patch_model import convert_qwen2_to_streaming
-from contextlib import contextmanager          
+from .qwen2_5.patch_model import convert_qwen2_5_to_streaming
+from .qwen2.patch_model import convert_qwen2_to_streaming      
 from transformers import set_seed
 set_seed(42)   
-from streaming_vlm.data.lmm_dataset import LMMDataset
+from ..data.lmm_dataset import LMMDataset
 from livecc_utils import  get_smart_resized_video_reader
 from livecc_utils.video_process_patch import _read_video_decord_plus, _spatial_resize_video
 import time
-from streaming_vlm.utils.vtt_utils import open_vtt, sec2ts
+from ..utils.vtt_utils import open_vtt, sec2ts
 # -----------------------------------------------------------------
 # Global configuration
 # -----------------------------------------------------------------

@@ -1,9 +1,6 @@
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, AutoProcessor
-from qwen_vl_utils import process_vision_info
 import torch
 from typing import Optional, Tuple
 from torch.nn import functional as F
-from types import MethodType
 from transformers.models.qwen2_vl.modeling_qwen2_vl import logger,apply_rotary_pos_emb_vision,flash_attn_varlen_func
 
 def streaming_visual_attention_forward(

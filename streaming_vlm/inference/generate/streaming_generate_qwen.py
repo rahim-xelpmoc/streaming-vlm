@@ -3,7 +3,7 @@ from typing import Optional, Callable, List, Union
 import torch
 from transformers.generation.utils import *
 from transformers.generation.utils import GenerateOutput
-from streaming_vlm.inference.generate.streaming_cache import StreamingCache
+from .streaming_cache import StreamingCache
 
 def _sample(
         self,

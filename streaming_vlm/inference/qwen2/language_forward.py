@@ -1,11 +1,9 @@
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, AutoProcessor
-from qwen_vl_utils import process_vision_info
 import torch
 from typing import Optional, Tuple, List, Union
 from torch.nn import functional as F
-from types import MethodType
 from transformers.models.qwen2_5_vl.modeling_qwen2_5_vl import logger,rotate_half,Cache,BaseModelOutputWithPast,DynamicCache,repeat_kv,_flash_attention_forward
-from streaming_vlm.inference.streaming_args import StreamingArgs
+
+from ..streaming_args import StreamingArgs
 
 
 def apply_multimodal_rotary_pos_emb(q, k, cos, sin, mrope_section, unsqueeze_dim=1):

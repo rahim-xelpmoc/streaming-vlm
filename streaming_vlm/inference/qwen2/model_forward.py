@@ -1,8 +1,7 @@
 from transformers.models.qwen2_vl.modeling_qwen2_vl import Qwen2VLCausalLMOutputWithPast,Qwen2VLModelOutputWithPast,is_torchdynamo_compiling
 from typing import Optional, List, Tuple, Union
 import torch
-from streaming_vlm.inference.streaming_args import StreamingArgs
-
+from ..streaming_args import StreamingArgs
 
 def model_forward(
         self,

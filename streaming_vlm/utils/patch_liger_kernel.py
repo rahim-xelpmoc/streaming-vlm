@@ -4,8 +4,6 @@ from typing import Tuple
 from typing import Union
 
 import torch
-
-from torch.nn import CrossEntropyLoss
 from transformers.models.qwen2_5_vl.modeling_qwen2_5_vl import Qwen2_5_VLCausalLMOutputWithPast
 
 from liger_kernel.transformers.model.loss_utils import LigerForCausalLMLoss

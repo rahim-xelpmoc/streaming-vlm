@@ -1,17 +1,12 @@
-from streaming_vlm.inference.qwen2.vision_forward import streaming_visual_attention_forward,streaming_visual_block_forward, streaming_visual_encoder_forward
-from streaming_vlm.inference.qwen2.language_forward import streaming_language_model_forward,streaming_text_attn_forward,streaming_text_decoder_layer_forward
-from streaming_vlm.inference.qwen2.model_forward import model_forward,qwen2_vl_forward,prepare_inputs_for_streaming_generation
-from streaming_vlm.inference.qwen2.pos_emb import get_rope_index
-from transformers import Qwen2VLForConditionalGeneration,Qwen2VLProcessor,GenerationMixin
+from .vision_forward import streaming_visual_attention_forward,streaming_visual_block_forward, streaming_visual_encoder_forward
+from .language_forward import streaming_language_model_forward,streaming_text_attn_forward,streaming_text_decoder_layer_forward
+from .model_forward import model_forward,qwen2_vl_forward
+from .pos_emb import get_rope_index
+from transformers import Qwen2VLForConditionalGeneration
 from types import MethodType
-from collections import deque
-from streaming_vlm.inference.streaming_args import StreamingArgs
-from streaming_vlm.inference.generate.streaming_generate_qwen import streaming_generate,_sample
-from streaming_vlm.inference.generate.prepare_generation import prepare_multiturn_multimodal_inputs_for_generation
-import ffmpeg
-import torch
-import os, torchvision
-import re
+from ..generate.streaming_generate_qwen import streaming_generate,_sample
+from ..generate.prepare_generation import prepare_multiturn_multimodal_inputs_for_generation
+import os
 os.makedirs('./output_image', exist_ok=True) 
 
 DURATION_SEC = 4
