@@ -1,10 +1,10 @@
-data/
 wandb/
 output/
 __pycache__/
 checkpoints/
 *.whl*
 output_image/
+*.egg-info
 
 
 # ---- OS / 编辑器垃圾 ----
